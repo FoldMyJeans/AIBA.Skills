@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "aiba-skills",
+  "description": "A business analysis method written to be read by both people and AI. Intake, user stories, meetings, handoff, change control, sign off, process mapping, bids, and vendor selection.",
+  "owner": {
+    "name": "FoldMyJeans",
+    "url": "https://github.com/FoldMyJeans"
+  },
+  "plugins": [
+    {
+      "name": "aiba-skills",
+      "description": "Nine business analysis skills that auto trigger on intake, story writing, meeting transcripts, handoff, change directives, formal sign off, process mapping, bid responses, and vendor selection.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
