@@ -1,0 +1,11 @@
+{
+  "name": "aiba-skills",
+  "version": "1.0.0",
+  "description": "A business analysis method as skills. Nine focused skills covering project intake and the four rigor dials, user stories and the workbook field set, the meeting loop, handoff to engineers and trackers, change control, formal sign off, process mapping, bid response, and vendor selection.",
+  "author": {
+    "name": "FoldMyJeans",
+    "url": "https://github.com/FoldMyJeans"
+  },
+  "repository": "https://github.com/FoldMyJeans/AIBA.Skills",
+  "skills": "./skills/"
+}
