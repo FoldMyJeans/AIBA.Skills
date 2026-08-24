@@ -1,6 +1,13 @@
 ---
 name: ba-handoff
-description: Move a finished story workbook into the hands that act on it: an engineer who estimates, a tracker that holds tickets, a stakeholder who needs one page. Use when stories are ready for estimation, when creating tickets from the workbook via the project management tool's MCP, when an engineer's estimates come back, or when a stakeholder or executive needs a summary. Trigger on "send this for estimates", "create the tickets", "push to the tracker", "make a one pager", "summarize the project for", "the estimates are back", "rollout plan", "migration cohorts", "comms plan", or "who needs to be told".
+description: >-
+  Move a finished story workbook into the hands that act on it: an engineer who estimates, a
+  tracker that holds tickets, a stakeholder who needs one page. Use when stories are ready
+  for estimation, when creating tickets from the workbook via the project management tool's
+  MCP, when an engineer's estimates come back, or when a stakeholder or executive needs a
+  summary. Trigger on "send this for estimates", "create the tickets", "push to the
+  tracker", "make a one pager", "summarize the project for", "the estimates are back",
+  "rollout plan", "migration cohorts", "comms plan", or "who needs to be told".
 ---
 
 # BA Handoff

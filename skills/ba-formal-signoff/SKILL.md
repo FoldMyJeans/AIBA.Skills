@@ -1,6 +1,12 @@
 ---
 name: ba-formal-signoff
-description: Generate a formal, signable requirements specification from an existing story workbook, for engagements where being wrong costs contract money. Use when a client contract, fixed price engagement, audit, or executive mandate requires a signed off spec, or when the formality dial was set to Contract at intake. Trigger on "formal spec", "sign off document", "the client needs to sign", "SRS", "requirements document for the contract", "something they can approve formally".
+description: >-
+  Generate a formal, signable requirements specification from an existing story workbook,
+  for engagements where being wrong costs contract money. Use when a client contract, fixed
+  price engagement, audit, or executive mandate requires a signed off spec, or when the
+  formality dial was set to Contract at intake. Trigger on "formal spec", "sign off
+  document", "the client needs to sign", "SRS", "requirements document for the contract",
+  "something they can approve formally".
 ---
 
 # BA Formal Sign Off

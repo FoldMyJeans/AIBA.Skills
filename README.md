@@ -23,9 +23,9 @@ The dotted line back from meetings to the workbook is the part people miss. The 
 
 The prototype step is a role rather than a particular technology, and what it exists for is to pressure test the detail before anybody starts building. On UI work a clickable HTML mock does that job well. On headless work you get the same effect from walking a sequence diagram, poking around a vendor sandbox, or running a pilot migration. The only fair reason to skip it is that the scope genuinely has no behaviour worth pressure testing.
 
-Five skills sit off the main line and only load when something calls for them. `ba-change` comes in when a directive changes something that was already agreed. `ba-formal-signoff` when a contract or an audit needs a spec somebody can sign. `ba-process-mapping` when the deliverable is a documented process rather than a system, or when a build needs its current state mapped or a runbook written. `ba-bid-response` handles the case where the method itself has to go into a proposal, and `ba-vendor-selection` the case where the honest answer is to buy rather than build.
+Several skills sit off the main line and only load when something calls for them. `ba-change` comes in when a directive changes something that was already agreed. `ba-formal-signoff` when a contract or an audit needs a spec somebody can sign. `ba-process-mapping` when the deliverable is a documented process rather than a system, or when a build needs its current state mapped or a runbook written. `ba-bid-response` handles the case where the method itself has to go into a proposal, and `ba-vendor-selection` the case where the honest answer is to buy rather than build.
 
-Three of the nine have not been through a live engagement yet. `ba-formal-signoff` is waiting on a real contract, `ba-process-mapping` on a real process, and `ba-change` on a real directive landing in the middle of a sprint. All three were built lean from practice rather than invented from scratch, but it is the first live run that will actually harden them.
+Some of these have not been through a live engagement yet. `ba-formal-signoff` is waiting on a real contract, `ba-process-mapping` on a real process, and `ba-change` on a real directive landing in the middle of a sprint. Each was built lean from practice rather than invented from scratch, but it is the first live run that will actually harden them.
 
 ## The four dials
 
@@ -52,11 +52,87 @@ Rigor is not a property of the project type. It comes down to four questions tha
 | [ba-bid-response](skills/ba-bid-response/SKILL.md) | Bidding. The proposal's method section and the line by line compliance matrix, before any project exists. |
 | [ba-vendor-selection](skills/ba-vendor-selection/SKILL.md) | Buying instead of building. Vendor RFP, demo scripts, scoring matrix, TCO, recommendation. |
 
+## Install
+
+The skills follow the Agent Skills standard (a `SKILL.md` with `name` and `description`
+frontmatter plus a `references/` folder where a skill has one), which is an open format, not
+a Claude one. Any tool that reads skills picks these up, and any tool that does not can still
+read them as plain markdown. Each skill folder is self contained: copy it alone and nothing
+breaks.
+
+### Claude Code
+
+This repo is a Claude Code plugin. It works anywhere you run Claude Code: the CLI, the VS Code
+or JetBrains extension, and the desktop app. The repo is public, so anyone can install it on
+any Claude plan.
+
+Terminal, the reliable way that works in every setup:
+
+```
+claude plugin marketplace add FoldMyJeans/AIBA.Skills
+claude plugin install aiba-skills@aiba-skills
+```
+
+Run those from a project folder, not your home directory. A git safety check can otherwise
+refuse to clone. Then `claude plugin list` should show `aiba-skills` as enabled. Restart your
+Claude Code session so the skills load.
+
+Inside a Claude Code chat session, the interactive form also works:
+
+```
+/plugin marketplace add FoldMyJeans/AIBA.Skills
+/plugin install aiba-skills@aiba-skills
+```
+
+The `/plugin` command is not available in every surface (the desktop app hides it), so use the
+terminal commands above if you do not see it. Update later with `claude plugin update
+aiba-skills` (or `/plugin update` in chat).
+
+### Codex, Cursor, and other agents that read ~/.agents/skills
+
+Clone the repo, copy the skill folders there once, and they get picked up.
+
+PowerShell (Windows):
+
+```
+git clone https://github.com/FoldMyJeans/AIBA.Skills
+Copy-Item -Recurse -Force AIBA.Skills/skills/* ~/.agents/skills/
+```
+
+macOS or Linux:
+
+```
+git clone https://github.com/FoldMyJeans/AIBA.Skills
+mkdir -p ~/.agents/skills && cp -R AIBA.Skills/skills/* ~/.agents/skills/
+```
+
+To update: `git pull` in the clone, then run the copy again. For project scoped use instead of
+user wide, copy the skill folders into the project's `.agents/skills/` folder, which these
+tools also discover.
+
+Clone the repo either way if you want the templates and the validator, since `assets/` and
+`scripts/` do not travel with an installed skill folder.
+
+### Any other AI tool
+
+A skill is a folder of markdown, so anything that can read markdown can use it, with or
+without skill support. If the tool can fetch a URL, give it the repo link and tell it which
+skill to read, for example `skills/ba-user-stories/SKILL.md`. If it cannot, open that file and
+paste it in, along with whichever file under `references/` it points you to.
+
+Take one skill rather than the set. A single `SKILL.md` is a few thousand tokens and fits
+anywhere, and the skills table above tells you which one you want. What you lose without skill
+support is only the automatic part: a skill aware tool notices you pasted a meeting transcript
+and loads `ba-meeting-loop` on its own. Everywhere else you pick the file yourself, and the
+content is identical.
+
 ## Assets and scripts
 
-`assets/` holds everything a new project starts from: the story workbook template with its closed sets already wired up as dropdowns, the bid compliance matrix template, and the project folder skeleton, which is a README plus the four knowledgebase files 01 to 04. Copy the folder, rename it, and fill in the dials. Both workbooks ship with one example row that passes the validator, which is there to show you the format and then be deleted.
+`assets/` holds everything a new project starts from: the story workbook template with its closed sets already wired up as dropdowns, the bid compliance matrix template, and the project folder skeleton, which is a README plus the numbered knowledgebase files. Copy the folder, rename it, and fill in the dials. Both workbooks ship with one example row that passes the validator, which is there to show you the format and then be deleted.
 
 `scripts/validate_workbook.py` runs the mechanical half of the ba-user-stories review pass over a workbook. It catches blanks, the closed vocabularies that do not depend on 01, dependencies that dangle or point into quarantine, approvals missing a role or a date, debt records that are past their revisit date or quietly piling up, and the vague word scan. On top of that it reports three heuristics that never block anything: failure paths, the NFR categories that are non negotiable for the project's tier, and the count of open debt records. It reads a CSV export as readily as it reads a workbook, so a project whose store is a tracker rather than Excel can be swept the same way. Passing `--matrix` validates a bid compliance matrix instead. What the script does not cover is listed in ba-user-stories, and the review pass written there stays the specification, with the script only ever automating part of it. It needs Python and openpyxl, and `--selfcheck` runs its own tests.
+
+`scripts/check_doc_contract.py` ties the field table in ba-user-stories back to the same vocabularies, so a field added in code cannot leave the documented table describing a workbook that no longer exists.
 
 `scripts/make_templates.py` regenerates the two xlsx templates. Their dropdowns are built from the same vocabularies the validator enforces, so what a BA is able to type and what the sweep will accept both come from one place. Run it after changing a closed set, and run `--verify` when you want to confirm the committed templates still match.
 
@@ -68,6 +144,16 @@ Rigor is not a property of the project type. It comes down to four questions tha
 - Approvals get recorded on the day they happen, with a role and a date. A yes that nobody wrote down does not exist once scope is being disputed. Silence does not count as a yes either, and a directive only approves the thing it actually says, which ba-change goes into properly.
 - The record is allowed to bend, but it is not allowed to break. Priorities flip and decisions get reversed, and when there is no time the method will happily record less detail than usual, but it will not record something untrue. Anything settled at intake changes only through a recorded change event.
 - AI drafts, the BA checks the draft against reality, and the stakeholder confirms, in that order. Content an AI generated that nobody who knows the business ever checked is the most expensive kind of wrong, precisely because it reads as though it is right.
+
+## Contributing
+
+Changes go on a branch and land through a pull request. AGENTS.md holds the writing rules, the
+redaction rules, and the structure rules, and `tools/check.ps1` enforces the mechanical half of
+them:
+
+```
+pwsh -File tools\check.ps1
+```
 
 ## Privacy and voice
 

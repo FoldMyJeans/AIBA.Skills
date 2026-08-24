@@ -1,6 +1,14 @@
 ---
 name: ba-vendor-selection
-description: Select a product or vendor instead of building, running requirements to vendor RFP to demo scripts to a weighted scoring matrix to a recommendation. Use when the engagement question is which CRM, ERP, ticketing, or SaaS tool to buy, when build versus buy is undecided, when part of the scope will be bought and the rest built, or when a client needs a defensible product recommendation. Trigger on "vendor selection", "choose a CRM", "which tool should we buy", "build vs buy", "buy the core and build around it", "hybrid buy and build", "RFP to vendors", "demo scripts", "scoring matrix", "TCO comparison", "shortlist", or any request to evaluate products against requirements rather than build them.
+description: >-
+  Select a product or vendor instead of building, running requirements to vendor RFP to demo
+  scripts to a weighted scoring matrix to a recommendation. Use when the engagement question
+  is which CRM, ERP, ticketing, or SaaS tool to buy, when build versus buy is undecided,
+  when part of the scope will be bought and the rest built, or when a client needs a
+  defensible product recommendation. Trigger on "vendor selection", "choose a CRM", "which
+  tool should we buy", "build vs buy", "buy the core and build around it", "hybrid buy and
+  build", "RFP to vendors", "demo scripts", "scoring matrix", "TCO comparison", "shortlist",
+  or any request to evaluate products against requirements rather than build them.
 ---
 
 # BA Vendor Selection

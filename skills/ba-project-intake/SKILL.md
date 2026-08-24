@@ -1,6 +1,17 @@
 ---
 name: ba-project-intake
-description: Start a business analysis project properly in under an hour. Use whenever a new project, feature request, tool build, process change, analysis request ("figure out why"), or experiment lands on the BA, whether it arrived as a real elicitation or as a directive from above. Sets the four rigor dials, creates the standard project folder, and writes a lightweight BRD that records why the work exists, what is out of scope, and how the work arrived. Also covers what a live project owes when a dial no longer matches reality, including a tier or formality upshift, ceremony that must come back, and approvals built up under Lean. Trigger on "new project", "we got asked to build", "start the BA work for", "set up the project folder", "write the BRD", "clients are getting access now", "the tier changed", "we won the renewal", "inherited backlog", "take over this project", or any first conversation about work that does not have a project folder yet.
+description: >-
+  Start a business analysis project properly in under an hour. Use whenever a new project,
+  feature request, tool build, process change, analysis request ("figure out why"), or
+  experiment lands on the BA, whether it arrived as a real elicitation or as a directive
+  from above. Sets the four rigor dials, creates the standard project folder, and writes a
+  lightweight BRD that records why the work exists, what is out of scope, and how the work
+  arrived. Also covers what a live project owes when a dial no longer matches reality,
+  including a tier or formality upshift, ceremony that must come back, and approvals built
+  up under Lean. Trigger on "new project", "we got asked to build", "start the BA work for",
+  "set up the project folder", "write the BRD", "clients are getting access now", "the tier
+  changed", "we won the renewal", "inherited backlog", "take over this project", or any
+  first conversation about work that does not have a project folder yet.
 ---
 
 # BA Project Intake
@@ -28,7 +39,7 @@ Ask these four questions, or answer them from what is already known, and write t
 
 ## Step 2. Create the project folder
 
-This shape has held up in practice, so use it as it stands. The folder `assets/project/` in this repo is exactly it, ready to copy and rename.
+This shape has held up in practice, so use it as it stands. The folder `assets/project/` in the AIBA.Skills repo is exactly it, ready to copy and rename.
 
 ```
 project-name/

@@ -1,6 +1,12 @@
 ---
 name: ba-bid-response
-description: Respond to an RFP, RFI, or tender as the bidder, before any project exists. Use for writing the BA method section of a proposal, building a sample artifact pack, and answering a client's written requirements line by line in a compliance matrix. Trigger on "RFP response", "RFI", "tender", "bid", "proposal due", "compliance matrix", "respond to these requirements", "the client sent 40 requirements", or any pre sales request to demonstrate or apply the BA method before a contract is signed.
+description: >-
+  Respond to an RFP, RFI, or tender as the bidder, before any project exists. Use for
+  writing the BA method section of a proposal, building a sample artifact pack, and
+  answering a client's written requirements line by line in a compliance matrix. Trigger on
+  "RFP response", "RFI", "tender", "bid", "proposal due", "compliance matrix", "respond to
+  these requirements", "the client sent 40 requirements", or any pre sales request to
+  demonstrate or apply the BA method before a contract is signed.
 ---
 
 # BA Bid Response
@@ -26,11 +32,11 @@ One row per client requirement, with four columns:
 - **Assumption.** What the answer is taking as true, stated per line. Unstated assumptions turn into unpaid scope after award, and every Partial and Alternative carries at least one.
 - **Reference.** Where in the proposal the full answer lives, if it lives anywhere.
 
-The file `assets/compliance_matrix_template.xlsx` is those four columns sitting alongside the client's requirement ID and text, with the response set wired up as a dropdown. Running `validate_workbook.py --matrix` checks for the deadline's usual casualties, meaning a Response that is outside the closed set or missing entirely, a duplicated or merged requirement row, and any Partial or Alternative that shipped without its assumption.
+The file `assets/compliance_matrix_template.xlsx` in the AIBA.Skills repo is those four columns sitting alongside the client's requirement ID and text, with the response set wired up as a dropdown. Running `validate_workbook.py --matrix` checks for the deadline's usual casualties, meaning a Response that is outside the closed set or missing entirely, a duplicated or merged requirement row, and any Partial or Alternative that shipped without its assumption.
 
-Run the vague word scan, using [the list](../ba-user-stories/references/vague-words.md), across the client's requirements as you answer them, because "intuitive", "performant" and "secure" sitting in their text are pricing risks sitting in yours. Each one gets an assumption naming what the answer actually priced, along the lines of "assumes WCAG 2.2 AA scope; formal audit excluded".
+Run the vague word scan, using the vague word list in the `ba-user-stories` skill, across the client's requirements as you answer them, because "intuitive", "performant" and "secure" sitting in their text are pricing risks sitting in yours. Each one gets an assumption naming what the answer actually priced, along the lines of "assumes WCAG 2.2 AA scope; formal audit excluded".
 
-The [NFR catalog](../ba-user-stories/references/nfr-catalog.md) will answer most non functional lines without any research at all, so quote the default, mark it as the proposed baseline, and note that contract figures supersede it.
+The NFR catalog in the `ba-user-stories` skill will answer most non functional lines without any research at all, so quote the default, mark it as the proposed baseline, and note that contract figures supersede it.
 
 ## Rules that survive the deadline
 

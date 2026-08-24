@@ -1,6 +1,17 @@
 ---
 name: ba-meeting-loop
-description: Turn a meeting transcript, recording notes, or walkthrough feedback into project updates without inventing anything. Use whenever a meeting happened on a BA project: a prototype walkthrough, a requirements session, a stakeholder review, an estimation call. Produces three lists (new stories, updated stories, approvals) plus knowledgebase updates, each change carrying a verbatim quote as provenance. Also covers leaving a project mid flight and coming back to it after an interruption, meaning what to write on the way out and what changed while the BA was away. Trigger on "here is the transcript", "meeting notes from", "we met about", "update the stories from this meeting", "what changed in the meeting", "catch me up", "where were we", "I have been away from this project", "I am going on leave", "pausing this project", "handing this project to another BA", "I have been pulled onto", or a transcript file landing in sources/.
+description: >-
+  Turn a meeting transcript, recording notes, or walkthrough feedback into project updates
+  without inventing anything. Use whenever a meeting happened on a BA project: a prototype
+  walkthrough, a requirements session, a stakeholder review, an estimation call. Produces
+  three lists (new stories, updated stories, approvals) plus knowledgebase updates, each
+  change carrying a verbatim quote as provenance. Also covers leaving a project mid flight
+  and coming back to it after an interruption, meaning what to write on the way out and what
+  changed while the BA was away. Trigger on "here is the transcript", "meeting notes from",
+  "we met about", "update the stories from this meeting", "what changed in the meeting",
+  "catch me up", "where were we", "I have been away from this project", "I am going on
+  leave", "pausing this project", "handing this project to another BA", "I have been pulled
+  onto", or a transcript file landing in sources/.
 ---
 
 # BA Meeting Loop

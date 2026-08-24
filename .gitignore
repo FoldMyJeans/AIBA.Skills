@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .impeccable/
+
+# Local only banned term list for tools/check.ps1, never published
+*.local.txt
