@@ -1,6 +1,14 @@
 ---
 name: ba-process-mapping
-description: Document a business process as the deliverable itself, or a process view inside a build. Use for HR processes, approval workflows, operational procedures, intake processes, any "how does this work and who does what" documentation request, and also inside a system project when the current state needs mapping before requirements or the deliverable includes a runbook (a cutover, an incident response, a release procedure). Trigger on "document the process", "map the workflow", "who approves what", "process for", "current state", "how should this work", "runbook", "cutover plan", or a project whose output is a documented procedure rather than software.
+description: >-
+  Document a business process as the deliverable itself, or a process view inside a build.
+  Use for HR processes, approval workflows, operational procedures, intake processes, any
+  "how does this work and who does what" documentation request, and also inside a system
+  project when the current state needs mapping before requirements or the deliverable
+  includes a runbook (a cutover, an incident response, a release procedure). Trigger on
+  "document the process", "map the workflow", "who approves what", "process for", "current
+  state", "how should this work", "runbook", "cutover plan", or a project whose output is a
+  documented procedure rather than software.
 ---
 
 # BA Process Mapping

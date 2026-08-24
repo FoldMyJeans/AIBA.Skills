@@ -1,6 +1,14 @@
 ---
 name: ba-user-stories
-description: Write, review, or restructure user stories in the standard BA workbook format. Use whenever creating a story backlog, drafting acceptance criteria, checking a backlog for gaps, adding NFRs, or building the Excel workbook an engineer estimates from and an AI creates tickets from. Trigger on "user stories", "acceptance criteria", "story workbook", "backlog", "break this into stories", "what stories are missing", "NFR", "non functional", or any request to turn a BRD, prototype, or feature list into buildable, estimable rows. Also covers data mapping and migration specs via the data-mapping reference, triggered by "field mapping", "data migration spec", "source to target".
+description: >-
+  Write, review, or restructure user stories in the standard BA workbook format. Use
+  whenever creating a story backlog, drafting acceptance criteria, checking a backlog for
+  gaps, adding NFRs, or building the Excel workbook an engineer estimates from and an AI
+  creates tickets from. Trigger on "user stories", "acceptance criteria", "story workbook",
+  "backlog", "break this into stories", "what stories are missing", "NFR", "non functional",
+  or any request to turn a BRD, prototype, or feature list into buildable, estimable rows.
+  Also covers data mapping and migration specs via the data-mapping reference, triggered by
+  "field mapping", "data migration spec", "source to target".
 ---
 
 # BA User Stories
@@ -15,7 +23,7 @@ One prefix per project, drawn from the project name, so a portal project might u
 
 ## The field set
 
-There are sixteen canonical fields, one column each, with exact names. The two engineer columns are extras that appear when the handoff dial says engineer for any epic. The file `assets/story_workbook_template.xlsx` is those sixteen plus the two engineer extras, with the closed sets already wired up as dropdowns, and you delete the extras when no epic says engineer.
+The canonical fields are one column each, with exact names, in this order. The two engineer columns are extras that appear when the handoff dial says engineer for any epic. The file `assets/story_workbook_template.xlsx` in the AIBA.Skills repo is the canonical fields plus the two engineer extras, with the closed sets already wired up as dropdowns, and you delete the extras when no epic says engineer.
 
 | # | Field | Rule |
 |---|---|---|

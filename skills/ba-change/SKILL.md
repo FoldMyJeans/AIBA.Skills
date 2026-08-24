@@ -1,6 +1,18 @@
 ---
 name: ba-change
-description: Record and apply changes that arrive as directives, covering reprioritizations, reversals, scope cuts, withdrawn approvals, verbal decisions, a dial that moves, and proceeding when nobody will approve. Use whenever management changes priorities mid flight, a decision reverses, an Approved story's content must change, a hallway or call decision needs recording, a rigor dial set at intake no longer matches reality, approvals are not coming and work must proceed anyway, a fix shipped before the paperwork, or shipped data turns out wrong and it is unclear whether that was decided or broken. Trigger on "management changed priorities", "the CEO said", "reprioritize", "descope", "that decision reversed", "approval withdrawn", "verbal decision", "hallway conversation", "the dials changed", "nobody will approve", "proceed at risk", "deferred as accepted risk", "hotfix", "production fire", "we shipped it already", "no time for the process", "was that a bug or was it agreed", "the data is wrong after go live".
+description: >-
+  Record and apply changes that arrive as directives, covering reprioritizations, reversals,
+  scope cuts, withdrawn approvals, verbal decisions, a dial that moves, and proceeding when
+  nobody will approve. Use whenever management changes priorities mid flight, a decision
+  reverses, an Approved story's content must change, a hallway or call decision needs
+  recording, a rigor dial set at intake no longer matches reality, approvals are not coming
+  and work must proceed anyway, a fix shipped before the paperwork, or shipped data turns
+  out wrong and it is unclear whether that was decided or broken. Trigger on "management
+  changed priorities", "the CEO said", "reprioritize", "descope", "that decision reversed",
+  "approval withdrawn", "verbal decision", "hallway conversation", "the dials changed",
+  "nobody will approve", "proceed at risk", "deferred as accepted risk", "hotfix",
+  "production fire", "we shipped it already", "no time for the process", "was that a bug or
+  was it agreed", "the data is wrong after go live".
 ---
 
 # BA Change Control

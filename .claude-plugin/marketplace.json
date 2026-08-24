@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "aiba-skills",
-      "description": "Nine business analysis skills that auto trigger on intake, story writing, meeting transcripts, handoff, change directives, formal sign off, process mapping, bid responses, and vendor selection.",
+      "description": "Business analysis skills that auto trigger on intake, story writing, meeting transcripts, handoff, change directives, formal sign off, process mapping, bid responses, and vendor selection.",
       "source": "./",
       "category": "productivity"
     }
